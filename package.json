@@ -7,8 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf docs/* && webpack build"
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,10 @@
   },
   "homepage": "https://github.com/RiccardoColtrinari/frontend-mentor-projects#readme",
   "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4"
   }
