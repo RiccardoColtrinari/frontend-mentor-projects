@@ -657,13 +657,14 @@ video {
   font-family: Figtree;
 }
 
-.text-\[20px\] {
-  font-size: 20px;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-xs {
@@ -707,5 +708,20 @@ video {
 @media (min-width: 768px) {
   .md\:w-\[384px\] {
     width: 384px;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
