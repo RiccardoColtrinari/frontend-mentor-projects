@@ -21,11 +21,11 @@ module.exports = {
         filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
-        template: './qr_code_component/qr-code-component-main/index.html',
+        template: './projects/qr-code-component/index.html',
         filename: 'qr-code-component.html'
     }),
     new HtmlWebpackPlugin({
-        template: './blog_preview_card/blog-preview-card-main/index.html',
+        template: './projects/blog-preview-card/index.html',
         filename: 'blog-preview-card.html'
     }),
   ],
