@@ -4,7 +4,8 @@
   "description": "![Design preview for the Blog preview card coding challenge](./design/desktop-preview.jpg)",
   "main": "index.html",
   "scripts": {
-    "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./src/output.css --watch",
+    "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./src/blog-preview-card.css --watch",
+    "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./src/blog-preview-card.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
