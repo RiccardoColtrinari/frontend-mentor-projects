@@ -28,5 +28,9 @@ module.exports = {
         template: './projects/blog-preview-card/index.html',
         filename: 'blog-preview-card.html'
     }),
+    new HtmlWebpackPlugin({
+        template: './projects/social-links-profile/index.html',
+        filename: 'social-links-profile.html'
+    }),
   ],
 };
