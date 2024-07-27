@@ -1,0 +1,15 @@
+{
+  "name": "social-links-profile",
+  "version": "1.0.0",
+  "description": "Social links profile challenge for frontendmentor.",
+  "main": "index.html",
+  "scripts": {
+    "tailwind:watch": "npx tailwindcss -i ./src/style.css -o ./src/social-links-profile.css --watch",
+    "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./src/social-links-profile.css"
+  },
+  "author": "Riccardo Coltrinari",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.7"
+  }
+}
