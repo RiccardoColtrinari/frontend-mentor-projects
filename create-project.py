@@ -4,7 +4,6 @@ from pathlib import Path
 import click
 import os
 
-
 PROJECTS_FOLDER_NAME = "projects"
 
 PROJECTS_FOLDER_PATH = Path(PROJECTS_FOLDER_NAME).resolve()
@@ -49,7 +48,6 @@ def handle_design_resources(project_folder_path: Path, figma_dir: Path = None):
         print("No figma folder given!")
 
 
-
 def create_structure(project_name: str, sources_dir: Path = None, figma_dir: Path = None):
     project_folder_path = PROJECTS_FOLDER_PATH / project_name
 
@@ -69,12 +67,18 @@ def create_structure(project_name: str, sources_dir: Path = None, figma_dir: Pat
 
 @click.command()
 @click.argument('project_name')
-@click.option('--sources-dir', '-s', default=None, type=click.Path(exists=True, file_okay=False, resolve_path=True, path_type=Path), help="(Optional) Directory containing project source code. When passed its content is extracted and put into the project folder.")
-@click.option('--figma-dir', '-f', default=None, type=click.Path(exists=True, file_okay=False, resolve_path=True, path_type=Path), help="(Optional) Directory containing project figma design. When passed its content is extracted and put into the 'design' folder of the project.")
+@click.option('--sources-dir', '-s', default=None,
+              type=click.Path(exists=True, file_okay=False, resolve_path=True, path_type=Path),
+              help="(Optional) Directory containing project source code. When passed its content is extracted and put "
+                   "into the project folder.")
+@click.option('--figma-dir', '-f', default=None,
+              type=click.Path(exists=True, file_okay=False, resolve_path=True, path_type=Path),
+              help="(Optional) Directory containing project figma design. When passed its content is extracted and "
+                   "put into the 'design' folder of the project.")
 def main(
-    project_name: str,
-    sources_dir: Path,
-    figma_dir: Path
+        project_name: str,
+        sources_dir: Path,
+        figma_dir: Path
 ):
     current_workdir = os.getcwd()
     os.chdir(PROJECTS_FOLDER_PATH)
