@@ -67,19 +67,20 @@ def create_structure(project_name: str, sources_dir: Path = None, figma_dir: Pat
 
 @click.command()
 @click.argument('project_name')
-@click.option('--sources-dir', '-s', default=None,
-              type=click.Path(exists=True, file_okay=False, resolve_path=True, path_type=Path),
-              help="(Optional) Directory containing project source code. When passed its content is extracted and put "
-                   "into the project folder.")
+@click.argument('sources_dir', type=click.Path(exists=True, file_okay=False, resolve_path=True, path_type=Path))
 @click.option('--figma-dir', '-f', default=None,
               type=click.Path(exists=True, file_okay=False, resolve_path=True, path_type=Path),
-              help="(Optional) Directory containing project figma design. When passed its content is extracted and "
+              help="Directory containing project figma design. When passed its content is extracted and "
                    "put into the 'design' folder of the project.")
 def main(
         project_name: str,
         sources_dir: Path,
         figma_dir: Path
 ):
+    """
+    PROJECT_NAME: The name of the project\n
+    SOURCES_DIR: Directory containing project source code. When passed its content is extracted and put into the project
+    folder. """
     current_workdir = os.getcwd()
     os.chdir(PROJECTS_FOLDER_PATH)
 
