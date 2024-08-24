@@ -2,12 +2,8 @@
 
 from pathlib import Path
 import click
-import os
 
-PROJECTS_FOLDER_NAME = "projects"
-
-PROJECTS_FOLDER_PATH = Path(PROJECTS_FOLDER_NAME).resolve()
-assert PROJECTS_FOLDER_PATH.exists(), f"The '{PROJECTS_FOLDER_NAME}' folder must be available in the current directory!"
+from constants import PROJECTS_FOLDER_PATH, PROJECTS_FOLDER_NAME
 
 
 def create_from_sources(project_folder_path: Path, sources_dir: Path):
@@ -39,7 +35,7 @@ def handle_design_resources(project_folder_path: Path, figma_dir: Path = None):
 
         resource_path.rename(PROJECT_DESIGN_FOLDER_PATH / resource_path.name)
 
-        print(f"File {resource_name} successfully moved into the {PROJECT_DESIGN_FOLDER_PATH} folder!")
+        print(f"File {resource_name} successfully moved into the '{PROJECT_DESIGN_FOLDER_PATH}' folder!")
 
     if figma_dir:
         handle_figma_sources(PROJECT_DESIGN_FOLDER_PATH, figma_dir)
@@ -64,6 +60,8 @@ def create_structure(project_name: str, sources_dir: Path = None, figma_dir: Pat
     handle_design_resources(project_folder_path, figma_dir)
     print("Design files successfully handled!")
 
+    print(f"Project '{project_name}' created.")
+
 
 @click.command()
 @click.argument('project_name')
@@ -81,12 +79,8 @@ def main(
     PROJECT_NAME: The name of the project\n
     SOURCES_DIR: Directory containing project source code. When passed its content is extracted and put into the project
     folder. """
-    current_workdir = os.getcwd()
-    os.chdir(PROJECTS_FOLDER_PATH)
 
     create_structure(project_name, sources_dir, figma_dir)
-
-    os.chdir(current_workdir)
 
 
 if __name__ == "__main__":
