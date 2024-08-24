@@ -1,0 +1,23 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}", "index.html"],
+  theme: {
+    extend: {
+      {%- if fontfamily %}
+      fontFamily: {
+        {%- for font in fontfamily %}
+        '{{ font.variable_name }}': {{ font.array }}
+        {%- endfor %}
+      },
+      {%- endif %}
+      {%- if colors %}
+      colors: {
+        {%- for color in colors %}
+        '{{ color.variable_name }}': '{{ color.value }}',
+        {%- endfor %}
+      },
+      {%- endif %}
+    },
+  },
+  plugins: [],
+}
