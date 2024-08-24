@@ -32,5 +32,6 @@ module.exports = {
         template: './projects/social-links-profile/index.html',
         filename: 'social-links-profile.html'
     }),
+    //  PROJECTS LIST
   ],
 };
