@@ -35,8 +35,8 @@ def init_npm(project_path: Path):
     package_json['name'] = project_name
     package_json['main'] = "index.html"
     package_json["scripts"] = {
-        "tailwind:watch": f"npx tailwindcss -i ./src/style.css -o ./src/{project_name}.css --watch",
-        "tailwind:build": f"npx tailwindcss -i ./src/style.css -o ./src/{project_name}.css",
+        "tailwind:watch": f"npx tailwindcss -i ./src/styles.css -o ./src/{project_name}.css --watch",
+        "tailwind:build": f"npx tailwindcss -i ./src/styles.css -o ./src/{project_name}.css",
     }
     package_json["author"] = "Riccardo Coltrinari"
     package_json["description"] = f"{project_name.replace('-', ' ').capitalize()} challenge for frontendmentor."
