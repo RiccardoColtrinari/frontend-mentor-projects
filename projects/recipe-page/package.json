@@ -1,0 +1,13 @@
+{
+    "name": "recipe-page",
+    "version": "1.0.0",
+    "description": "Recipe page challenge for frontendmentor.",
+    "main": "index.html",
+    "scripts": {
+        "tailwind:watch": "npx tailwindcss -i ./src/styles.css -o ./src/recipe-page.css --watch",
+        "tailwind:build": "npx tailwindcss -i ./src/styles.css -o ./src/recipe-page.css"
+    },
+    "keywords": [],
+    "author": "Riccardo Coltrinari",
+    "license": "ISC"
+}

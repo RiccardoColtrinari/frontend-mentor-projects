@@ -32,6 +32,10 @@ module.exports = {
         template: './projects/social-links-profile/index.html',
         filename: 'social-links-profile.html'
     }),
+    new HtmlWebpackPlugin({
+        template: './projects/recipe-page/index.html',
+        filename: 'recipe-page.html'
+    }),
     //  PROJECTS LIST
   ],
 };
