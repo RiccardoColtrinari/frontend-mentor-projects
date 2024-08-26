@@ -174,6 +174,9 @@ def initialize_tailwind(project_path: Path):
 
     add_styles_css(project_path)
 
+    print("Running command 'npm run tailwind:build'...")
+    subprocess.run(["npm", "run", "tailwind:build"], stdout=subprocess.DEVNULL)
+
     modify_index_html(project_path)
 
 
