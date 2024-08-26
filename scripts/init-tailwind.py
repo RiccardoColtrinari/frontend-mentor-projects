@@ -153,7 +153,7 @@ def modify_index_html(project_path: Path) -> None:
     with index_html_path.open('r') as file:
         index_html = file.read()
 
-    insert_line = f'  <link href="./{project_path.name}.css" rel="stylesheet">'
+    insert_line = f'  <link href="./src/{project_path.name}.css" rel="stylesheet">'
 
     if insert_line in index_html:
         print(f"Line '{insert_line}' already contained in the '{str(index_html_path)}' file.")
