@@ -856,6 +856,10 @@ video {
     background-color: hsl(30 54% 90% / var(--tw-bg-opacity));
   }
 
+  .md\:p-0 {
+    padding: 0px;
+  }
+
   .md\:p-10 {
     padding: 2.5rem;
   }
