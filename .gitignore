@@ -2,3 +2,4 @@ node_modules
 venv
 .vscode
 .idea
+__pycache__
