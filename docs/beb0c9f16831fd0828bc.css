@@ -716,9 +716,9 @@ video {
   font-family: Young Serif;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-xl {
@@ -785,11 +785,6 @@ video {
   line-height: 2.25rem;
   --tw-text-opacity: 1;
   color: hsl(14 45% 36% / var(--tw-text-opacity));
-}
-
-.text-4_5xl {
-  font-size: 2.5rem /* 48px */;
-  line-height: 1;
 }
 
 .marker\:font-outfit *::marker {
@@ -867,5 +862,9 @@ video {
   .md\:py-28 {
     padding-top: 7rem;
     padding-bottom: 7rem;
+  }
+
+  .md\:text-\[2\.5rem\] {
+    font-size: 2.5rem;
   }
 }
