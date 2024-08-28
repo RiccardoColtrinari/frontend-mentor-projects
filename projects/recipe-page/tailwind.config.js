@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.{html,js}", "index.html"],
   theme: {
     extend: {
+      fontFamily: {
+        "young-serif": ["Young Serif"],
+        "outfit": ["Outfit"]
+      },
       colors: {
         "white": "hsl(0, 0%, 100%)",
         "stone-100": "hsl(30, 54%, 90%)",

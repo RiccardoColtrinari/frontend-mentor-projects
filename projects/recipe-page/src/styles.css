@@ -1,4 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-        
+
+
+/* IMPORT FROM FILE: not used to avoid conflicts on the showcase page */
+/* @layer base {
+    @font-face {
+        font-family: 'Young Serif';
+        font-weight: 400;
+        src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf') format("opentype");
+    }
+    @font-face {
+        font-family: 'Outfit';
+        font-weight: 400;
+        src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format("opentype");
+    }
+    @font-face {
+        font-family: 'Outfit';
+        font-weight: 600;
+        src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format("opentype");
+    }
+    @font-face {
+        font-family: 'Outfit';
+        font-weight: 700;
+        src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format("opentype");
+    }
+} */
+
+.text-section-header {
+    @apply font-young-serif text-3xl text-brown-800;
+}
+
+.text-4_5xl {
+    font-size: 2.5rem /* 48px */;
+    line-height: 1;
+}
